@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  role_name: openssh
+  author: Stas Stavnichuk
+  description: install and configure openssh-server and openssh-client
+  license: MIT
+  min_ansible_version: 1.4
+  platforms:
+  - name: Debian
+    versions:
+    - buster
+    - stretch
+    - jessie
+  galaxy_tags:
+    - system
+    - debian
+    - openssh

@@ -1,0 +1,7 @@
+---
+- name: install openssh-server and openssh-client
+  apt:
+    name: ['openssh-client', 'openssh-server']
+    state: present
+  notify:
+    - reload ssh
