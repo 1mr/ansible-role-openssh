@@ -3,7 +3,7 @@
   hosts: all
   tasks:
     - name: create dir /run/sshd
-      file: path=/run/sshd state=directory mode=preserve
+      file: path=/run/sshd state=directory mode=0755
     - name: "Include 1mr.openssh"
       include_role:
         name: "1mr.openssh"
