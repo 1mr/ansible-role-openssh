@@ -3,5 +3,3 @@
   apt:
     name: ['openssh-client', 'openssh-server']
     state: present
-  notify:
-    - reload ssh
