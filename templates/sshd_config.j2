@@ -1,4 +1,4 @@
-
+#{{ ansible_managed }}
 Port {{ ssh_port|default(22) }}
 {% if ssh_address is defined %}
 {% for addr in ssh_address %}
@@ -36,7 +36,7 @@ DebianBanner no
 AcceptEnv LANG LC_*
 
 # override default of no subsystems
-Subsystem sftp  /usr/lib/ssh/sftp-server -f AUTHPRIV -l INFO
+Subsystem sftp /usr/lib/openssh/sftp-server -f AUTHPRIV -l INFO
 
 {% if ssh_match_users is defined %}
 {% for user in ssh_match_users %}
@@ -53,5 +53,6 @@ Match User {{ user.name }}
 Match{% if addr.ip is defined %} Address {% for ip in addr.ip %}{{ ip }}{% if not loop.last %},{% endif %}{% endfor %}{% endif %}{% if addr.host is defined %} Host {% for host in addr.host %}{{ host }}{% if not loop.last %},{% endif %}{% endfor %}{% endif %}{{ ' ' }}
     PermitRootLogin yes
 {% endif %}
+
 {% endfor %}
 {% endif %}
