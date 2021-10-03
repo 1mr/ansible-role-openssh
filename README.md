@@ -1,17 +1,13 @@
-[![Build Status](https://travis-ci.com/1mr/ansible-role-openssh.svg?branch=master)](https://travis-ci.com/1mr/ansible-role-openssh)
+# Openssh
 
-Openssh
-=======
-
+![Build Status](https://github.com/1mr/ansible-role-openssh/actions/workflows/ci.yaml/badge.svg)
 This role helps to install and configure openssh-server and openssh-client.
 
-Requirements
-------------
+## Requirements
 
-This role requires ansible 1.4 or higher.
+This role requires ansible 2.5 or higher.
 
-Role Variables
---------------
+## Role Variables
 
 The variables that can be passed to this role and a brief description about them are as follows:
 
@@ -28,7 +24,7 @@ The variables that can be passed to this role and a brief description about them
           - app1.example.com
           - app2.example.com
     ssh_trusted_user_ca_keys:
-      - "ca"
+      - "ca_key"
 
 Variables 'ssh_port' and 'ssh_address' are optional.
 Default values for optional variables:
@@ -37,24 +33,20 @@ Default values for optional variables:
     ssh_address:
       - 0.0.0.0
 
-Dependencies
-------------
+## Dependencies
 
 None
 
-Example Playbook
-----------------
+## Example Playbook
 
     - hosts: servers
       roles:
         - { role: 1mr.openssh, tags: openssh }
 
-License
--------
+## License
 
 MIT
 
-Author Information
-------------------
+## Author Information
 
 This role was created by Stas Stavnichuk.
