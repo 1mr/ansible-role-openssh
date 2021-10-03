@@ -2,6 +2,8 @@
 - name: Converge
   hosts: all
   tasks:
+    - name: update apt cache
+      apt: update_cache=yes
     - name: create dir /run/sshd
       file: path=/run/sshd state=directory mode=0755
     - name: "Include 1mr.openssh"
