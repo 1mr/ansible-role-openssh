@@ -1,5 +1,5 @@
 ---
-- name: install openssh-server and openssh-client
+- name: install openssh-server
   apt:
-    name: ['openssh-client', 'openssh-server']
+    name: ['openssh-server']
     state: present
