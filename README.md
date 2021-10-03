@@ -1,6 +1,6 @@
 # Openssh ![Build Status](https://github.com/1mr/ansible-role-openssh/actions/workflows/ci.yaml/badge.svg)
 
-This role helps to install and configure openssh-server and openssh-client.
+This role helps to install and configure openssh-server.
 
 ## Requirements
 
